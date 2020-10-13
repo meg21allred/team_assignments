@@ -33,6 +33,8 @@ catch (PDOException $ex)
 
 $id = $_GET['id'];
 
+echo $id;
+
 echo "<ul>";
 
 foreach ($db->query("SELECT * FROM scriptures WHERE id LIKE '%".$id."%'") as $row)
