@@ -31,20 +31,21 @@ catch (PDOException $ex)
   die();
 }
 
+
 echo '  <form action="week05.php" method="get">
 <label for="book">Enter Book: </label>
-<input type="text" name="book" id="book">
-<input type="submit" value="Find">
+<input type="text" name="bookToSearch" id="book">
+<input type="submit" name="search" value="Find">
 
 </form>';
 
-$book = $_GET['book'];
+$book = $_GET['bookToSearch'];
 
 echo $book;
 
 echo "<ul>";
 
-foreach ($db->query("SELECT * FROM scriptures WHERE book = " . $book) as $row)
+foreach ($db->query("SELECT * FROM scriptures WHERE book LIKE '%".$book."%'") as $row)
 {
   echo "<li>";
   echo "<strong>" . $row['book'] . "</strong> " . $row['chapter'] . ":" . $row['verse'] . " - " . '"' . $row['content'] . '"';
