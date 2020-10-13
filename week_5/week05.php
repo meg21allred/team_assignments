@@ -40,6 +40,8 @@ echo '  <form action="week05.php" method="get">
 
 $book = $_GET['book'];
 
+echo $book;
+
 echo "<ul>";
 
 foreach ($db->query('SELECT * FROM scriptures WHERE book = $book') as $row)
