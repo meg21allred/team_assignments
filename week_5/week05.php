@@ -60,7 +60,7 @@ echo "<ul>";
 foreach ($db->query("SELECT * FROM scriptures") as $row)
 {
   echo "<li>";
-  echo "<strong>" . $row['book'] . "</strong> " . $row['chapter'] . ":" . $row['verse'] . " " . "<a href='details.php' . 'id=1'>content</a>";
+  echo "<strong>" . $row['book'] . "</strong> " . $row['chapter'] . ":" . $row['verse'] . " " . "<a href='details.php'>content</a>";
   echo "</li>";
 }
 
