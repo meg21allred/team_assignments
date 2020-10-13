@@ -37,12 +37,26 @@ echo $id;
 
 echo "<ul>";
 
-foreach ($db->query("SELECT * FROM scriptures WHERE id = 1") as $row)
-{
-  echo "<li>";
-  echo "<strong>" . $row['book'] . "</strong> " . $row['chapter'] . ":" . $row['verse'] . " - " . '"' . $row['content'] . '"';
-  echo "</li>";
-}
+$scriptures = $db->prepare("SELECT book, chapter, verse, content FROM scriptures WHERE id = :id");
+                  $scriptures->execute(array(':id' => $id));
+
+                  while ($sRow = $scriptures->fetch(PDO::FETCH_ASSOC))
+                  {
+                     $book = $sRow["book"];
+                     $chapter = $sRow["chapter"];
+                     $verse = $sRow["verse"];
+                     $content = $sRow["content"];
+
+                     echo "<p>$book $chapter:$verse - $content.</p>";
+                  }
+
+
+// foreach ($db->query("SELECT * FROM scriptures WHERE id = 1") as $row)
+// {
+//   echo "<li>";
+//   echo "<strong>" . $row['book'] . "</strong> " . $row['chapter'] . ":" . $row['verse'] . " - " . '"' . $row['content'] . '"';
+//   echo "</li>";
+// }
 
 echo "</ul>";
 
