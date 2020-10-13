@@ -54,6 +54,17 @@ foreach ($db->query("SELECT * FROM scriptures WHERE book LIKE '%".$book."%'") as
 
 echo "</ul>";
 
+
+echo "<ul>";
+
+foreach ($db->query("SELECT * FROM scriptures") as $row)
+{
+  echo "<li>";
+  echo "<strong>" . $row['book'] . "</strong> " . $row['chapter'] . ":" . $row['verse'] . "<a href='details.php'>content</a>";
+  echo "</li>";
+}
+
+echo "</ul>";
     ?>
    
 </body>
