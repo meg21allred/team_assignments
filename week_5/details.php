@@ -31,7 +31,7 @@ catch (PDOException $ex)
   die();
 }
 
-$id = $_GET['id']
+$id = $_GET['id'];
 
 echo "<ul>";
 
