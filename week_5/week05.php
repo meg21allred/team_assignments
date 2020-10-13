@@ -44,7 +44,7 @@ echo $book;
 
 echo "<ul>";
 
-foreach ($db->query('SELECT * FROM scriptures WHERE book = "Mosiah" ') as $row)
+foreach ($db->query('SELECT * FROM scriptures WHERE book = "John" ') as $row)
 {
   echo "<li>";
   echo "<strong>" . $row['book'] . "</strong> " . $row['chapter'] . ":" . $row['verse'] . " - " . '"' . $row['content'] . '"';
