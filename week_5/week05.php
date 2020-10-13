@@ -39,9 +39,9 @@ echo '  <form action="week05.php" method="get">
 
 </form>';
 
-$book = $_GET['bookToSearch'];
+$book = '';
 
-echo $book;
+$book = $_GET['bookToSearch'];
 
 echo "<ul>";
 
@@ -60,7 +60,7 @@ echo "<ul>";
 foreach ($db->query("SELECT * FROM scriptures") as $row)
 {
   echo "<li>";
-  echo "<strong>" . $row['book'] . "</strong> " . $row['chapter'] . ":" . $row['verse'] . "<a href='details.php'>content</a>";
+  echo "<strong>" . $row['book'] . "</strong> " . $row['chapter'] . ":" . $row['verse'] . " " . "<a href='details.php'>content</a>";
   echo "</li>";
 }
 
