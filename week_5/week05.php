@@ -31,9 +31,9 @@ catch (PDOException $ex)
   die();
 }
 
-echo '  <form action="{$_SERVER["PHP_SELF"]}" method="get">
+echo '  <form action="week05.php" method="get">
 <label for="book">Enter Book: </label>
-<input type="text" name="book" id="book">>
+<input type="text" name="book" id="book">
 <input type="submit" value="Find">
 
 </form>';
