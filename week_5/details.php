@@ -37,7 +37,7 @@ echo $id;
 
 echo "<ul>";
 
-foreach ($db->query("SELECT * FROM scriptures WHERE id LIKE $id") as $row)
+foreach ($db->query("SELECT * FROM scriptures WHERE id = 1") as $row)
 {
   echo "<li>";
   echo "<strong>" . $row['book'] . "</strong> " . $row['chapter'] . ":" . $row['verse'] . " - " . '"' . $row['content'] . '"';
