@@ -44,7 +44,7 @@ echo $book;
 
 echo "<ul>";
 
-foreach ($db->query("SELECT * FROM scriptures WHERE book = 'John'") as $row)
+foreach ($db->query("SELECT * FROM scriptures WHERE book = $book") as $row)
 {
   echo "<li>";
   echo "<strong>" . $row['book'] . "</strong> " . $row['chapter'] . ":" . $row['verse'] . " - " . '"' . $row['content'] . '"';
@@ -54,11 +54,6 @@ foreach ($db->query("SELECT * FROM scriptures WHERE book = 'John'") as $row)
 echo "</ul>";
 
     ?>
-    <form action="">
-    <label for=""></label>
-    <input type="text" name="book" id="book">>
-    <input type='submit' value='Find'>
-    
-    </form>
+   
 </body>
 </html>
