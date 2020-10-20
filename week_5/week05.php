@@ -74,7 +74,7 @@ echo "</ul>";
   Content: <input type="textarea" name="content" placeholder="content..."><br>
 <?php
 foreach ($db->query("SELECT * FROM topic") as $row) {
-  echo "<input type='checkbox' value='hello'><br>";
+  echo '<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">';
 }
 ?>
 <button type="submit" name="subBtn">Submit</button>
