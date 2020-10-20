@@ -76,7 +76,6 @@ echo "</ul>";
 foreach ($db->query("SELECT * FROM topic") as $row) {
   echo "<input type='checkbox' name='topic" . $row['id'] . "' value='" . $row['names'] . "'>
   <label> " . $row['names'] . "</label> <br>";
-  echo "<input type='hidden' name='id' value='" .$row['id'] .">";
 }
 ?>
 <button type="submit" name="subBtn">Submit</button>
