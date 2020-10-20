@@ -71,11 +71,11 @@ echo "</ul>";
   Chapter: <input type="text" name="chapter" placeholder="chapter..."><br>
   Verse:   <input type="text" name="verse" placeholder="verse..."><br>
   <br><br>
-  Content: <input type="textarea" name="content" placeholder="content..."><br>
+  Content: <input type="textarea" name="content" placeholder="content..." row="10" col="50"><br><br>
 <?php
 foreach ($db->query("SELECT * FROM topic") as $row) {
   echo "<input type='checkbox' name='topic" . $row['id'] . "' value='" . $row['names'] . "'>
-  <label> " . $row['names'] . ",</label> <br>";
+  <label> " . $row['names'] . "</label> <br>";
 }
 ?>
 <button type="submit" name="subBtn">Submit</button>
