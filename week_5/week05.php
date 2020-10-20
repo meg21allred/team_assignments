@@ -67,14 +67,15 @@ foreach ($db->query("SELECT * FROM scriptures") as $row)
 echo "</ul>";
     ?>
 <form action="details.php" method="post">
-  Book:    <input type="text" name="book" placeholder="book...">
-  Chapter: <input type="text" name="chapter" placeholder="chapter...">
-  Verse:   <input type="text" name="verse" placeholder="verse...">
-  <br>
-  Content: <input type="textarea" name="content" placeholder="content...">
+  Book:    <input type="text" name="book" placeholder="book..."><br>
+  Chapter: <input type="text" name="chapter" placeholder="chapter..."><br>
+  Verse:   <input type="text" name="verse" placeholder="verse..."><br>
+  <br><br>
+  Content: <input type="textarea" name="content" placeholder="content..."><br>
 <?php
 foreach ($db->query("SELECT * FROM topic") as $row) {
-  echo "<input type='checkbox' name='topic' value='" . $row['names'] . "><br>";
+  echo $row['names'];
+  //echo "<input type='checkbox' name='topic' value='" . $row['names'] . "><br>";
 }
 ?>
 <button type="submit" name="subBtn">Submit</button>
