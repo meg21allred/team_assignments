@@ -59,8 +59,8 @@ $scriptures = $db->prepare("SELECT book, chapter, verse, content FROM scriptures
 // }
 
 echo "</ul>";
-
     
     ?>
+    
 </body>
 </html>
