@@ -71,7 +71,7 @@ echo "</ul>";
   Chapter: <input type="text" name="chapter" placeholder="chapter..."><br>
   Verse:   <input type="text" name="verse" placeholder="verse..."><br>
   <br><br>
-  Content: <input type="textarea" name="content" placeholder="content..." rows="10" cols="50"><br><br>
+  Content: <textarea type="textarea" name="content" placeholder="content..." rows="10" cols="50"></textarea><br><br>
 <?php
 foreach ($db->query("SELECT * FROM topic") as $row) {
   echo "<input type='checkbox' name='topic" . $row['id'] . "' value='" . $row['names'] . "'>
