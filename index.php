@@ -7,6 +7,7 @@
 </head>
 <body>
 <h1>Team Assignments</h1>
-   <a href="week_5/week05.php">week05</a>
+   <a href="week_5/week05.php">week05</a><br>
+   <a href="week_7/home.php">week07</a>
 </body>
 </html>
